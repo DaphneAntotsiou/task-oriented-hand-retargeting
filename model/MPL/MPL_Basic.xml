@@ -1,0 +1,26 @@
+<mujoco>
+	<include file="MPL_full.xml"/>
+	<include file="assets.xml"/>
+
+    <worldbody>
+		<geom type="plane" material="MatPlane" pos=".6 0 0.1" zaxis="-1 0 1" size=".1 .5 .025"/>
+		<geom type="plane" material="MatPlane" pos="-.6 0 0.1" zaxis="1 0 1" size=".1 .5 .025"/>
+		<geom type="plane" material="MatPlane" pos="0 .6 0.1" zaxis="0 -1 1" size=".5 .1 .025"/>
+		<geom type="plane" material="MatPlane" pos="0 -.6 0.1" zaxis="0 1 1" size=".5 .1 .025"/>
+
+        <body name="obj1" pos="0.2 -0.2 .1">
+            <geom type="sphere" material="MatWood" size="0.04" condim="6" friction="1 .001 .001"/>
+            <joint class="free"/>
+        </body>
+
+        <body name="obj2" pos="0 -0.2 .1">
+            <geom type="box" material="MatWoodB" size="0.02 0.04 0.06"/>
+            <joint class="free"/>
+        </body>
+
+        <body name="obj3" pos="-0.2 -0.2 .1">
+            <geom type="ellipsoid" material="MatSquare" size="0.05 0.04 0.02" condim="6" friction="1 .001 .001"/>
+            <joint class="free"/>
+        </body>
+    </worldbody>
+</mujoco>

@@ -1,0 +1,23 @@
+<mujoco>
+	<include file="MPL_full.xml"/>
+	<include file="assets.xml"/>
+	
+	<asset>
+		<material name="groundplane" texture="groundplane" texrepeat="10 10"/>
+		<material name="table2d" texture="marble2d" reflectance="0.3" rgba=".8 .8 .8 1"/>
+		<material name="tablecube" texture="marblecube" rgba=".8 .8 .8 1"/> 
+	</asset>
+	
+	<worldbody>
+		<geom type="plane" material="table2d" pos="0 0 0" size=".5 .5 .025"/>
+
+		<geom contype="0" conaffinity="0" type="box" material="tablecube" pos="0 0 -0.026" size=".5 .5 .025"/>
+		<geom contype="0" conaffinity="0" type="cylinder" fromto=".4 .4 -1.001 .4 .4 -0.001" size="0.04"/>
+		<geom contype="0" conaffinity="0" type="cylinder" fromto="-.4 .4 -1.001 -.4 .4 -0.001" size="0.04"/>
+		<geom contype="0" conaffinity="0" type="cylinder" fromto=".4 -.4 -1.001 .4 -.4 -0.001" size="0.04"/>
+		<geom contype="0" conaffinity="0" type="cylinder" fromto="-.4 -.4 -1.001 -.4 -.4 -0.001" size="0.04"/>
+        <geom contype="0" conaffinity="0" type="plane" pos="0 0 -1" size="10 10 0.25" material="groundplane"/> 
+		
+		
+	</worldbody>
+</mujoco>

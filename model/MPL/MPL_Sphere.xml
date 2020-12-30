@@ -1,0 +1,41 @@
+<mujoco>
+	<include file="MPL_Table.xml"/>
+
+	<default>
+		<default class="board">
+			<geom type="box" material="MatWood"/>
+		</default>
+	</default>
+	
+	<contact>
+			<pair geom1="thumb3" geom2="sphere" margin="0.04" gap="0.04"/>
+			<pair geom1="index3" geom2="sphere" margin="0.04" gap="0.04"/>
+			<pair geom1="middle3" geom2="sphere" margin="0.04" gap="0.04"/>
+			<pair geom1="ring3" geom2="sphere" margin="0.04" gap="0.04"/>
+			<pair geom1="pinky3" geom2="sphere" margin="0.04" gap="0.04"/>
+			<!-- <pair geom1="palm" geom2="sphere" margin="0.04" gap="0.04"/> -->
+
+	</contact>
+	<worldbody>
+	<!-- 
+		<geom type="plane" material="MatPlane" pos=".5 0 0.1" zaxis="-10000 0 1" size=".1 .5 .045"/>
+		<geom type="plane" material="MatPlane" pos="-.5 0 0.1" zaxis="10000 0 1" size=".1 .5 .045"/>
+		<geom type="plane" material="MatPlane" pos="0 .5 0.1" zaxis="0 -10000 1" size=".5 .1 .045"/>
+		<geom type="plane" material="MatPlane" pos="0 -.5 0.1" zaxis="0 10000 1" size=".5 .1 .045"/>
+<!-- 		<body childclass="board" pos="0 0 0.009">
+			<geom name="farr" pos="0 0.2 0"  size="0.05 0.05 0.01"/>
+			<geom name="midf" pos="0 0.0 0"  size="0.05 0.05 0.01"/>
+			<geom name="near" pos="0 -0.2 0" size="0.05 0.05 0.01"/>
+			<geom name="left" pos="-.15 0 0" size="0.10 0.25 0.01"/>
+			<geom name="righ" pos="0.15 0 0" size="0.10 0.25 0.01"/>
+			<geom name="topp" pos="0 0 0.03" size="0.25 0.005 .02"/>
+		</body>		 -->	
+		
+<!-- 				<body name="Object" pos="0 .1 .25">
+ -->
+		<body name="Object" pos="0 .1 0.03">
+			<geom name="sphere" type="sphere" material="MatWoodB" size="0.03"/>
+			<joint name="Object" class="free"/>
+		</body>		
+	</worldbody>
+</mujoco>
